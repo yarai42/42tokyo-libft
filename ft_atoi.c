@@ -1,0 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/10 06:56:23 by yarai             #+#    #+#             */
+/*   Updated: 2022/05/27 23:09:12 by yarai            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int		ft_atoi(const	char	*str);
+bool	ft_isspace(char	c);
+int		ft_isSign(char	c);
+
+bool	ft_isspace(char	c)
+{
+	if (('\t' <= c && c <= '\r') || c == ' ')
+		return (true);
+	return (false);
+}
+
+int	ft_isSign(char	c)
+{
+	if (c == '-')
+		return (-1);
+	else if (c == '+')
+		return (1);
+	return (0);
+}
+
+int	ft_atoi(const	char	*str)
+{
+	size_t	i;
+	int		sign;
+	int		ans;
+
+	i = 0;
+	sign = 1;
+	ans = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (ft_isSign(str[i]) != 0)
+	{
+		sign = ft_isSign(str[i]);
+		i++;
+	}
+	while ((0 <= str[i] - '0') && (str[i] - '0' <= 9))
+	{
+		ans = 10 * ans - (str[i] - '0');
+		i++;
+	}
+	return (ans * -sign);
+}
