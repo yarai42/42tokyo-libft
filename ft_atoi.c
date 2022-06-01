@@ -6,24 +6,24 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 06:56:23 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/27 23:09:12 by yarai            ###   ########.fr       */
+/*   Updated: 2022/05/28 22:54:27 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const	char	*str);
-bool	ft_isspace(char	c);
-int		ft_isSign(char	c);
+int			ft_atoi(const	char	*str);
+static bool	ft_isspace(char	c);
+static int	ft_isSign(char	c);
 
-bool	ft_isspace(char	c)
+static bool	ft_isspace(char	c)
 {
 	if (('\t' <= c && c <= '\r') || c == ' ')
 		return (true);
 	return (false);
 }
 
-int	ft_isSign(char	c)
+static int	ft_isSign(char	c)
 {
 	if (c == '-')
 		return (-1);

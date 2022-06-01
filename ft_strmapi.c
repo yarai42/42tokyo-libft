@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 11:11:09 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/27 23:39:24 by yarai            ###   ########.fr       */
+/*   Updated: 2022/05/30 21:18:52 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const	*s, char	(*f)(unsigned	int, char))
 	unsigned int	i;
 	char			*ans;
 
+	if (!s || !f)
+		return (NULL);
 	slen = 0;
 	i = 0;
 	while (s[slen])

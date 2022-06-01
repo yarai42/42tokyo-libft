@@ -6,17 +6,17 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 09:39:46 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/23 19:56:29 by yarai            ###   ########.fr       */
+/*   Updated: 2022/05/28 23:02:31 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const	*s1, char const	*set);
-size_t	ft_slen(char const	*str);
-size_t	ft_scmp(char const	s1, char const	*s2);
+char			*ft_strtrim(char const	*s1, char const	*set);
+static size_t	ft_slen(char const	*str);
+static size_t	ft_scmp(char const	s1, char const	*s2);
 
-size_t	ft_slen(char const	*str)
+static size_t	ft_slen(char const	*str)
 {
 	size_t	i;
 
@@ -26,7 +26,7 @@ size_t	ft_slen(char const	*str)
 	return (i);
 }
 
-size_t	ft_scmp(char const	s1, char const	*s2)
+static size_t	ft_scmp(char const	s1, char const	*s2)
 {
 	size_t	i;
 

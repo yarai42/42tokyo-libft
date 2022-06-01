@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 09:54:45 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/24 23:47:06 by yarai            ###   ########.fr       */
+/*   Updated: 2022/05/30 21:19:34 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_striteri(char	*s, void	(*f)(unsigned	int, char *))
 	size_t	i;
 
 	i = 0;
+	if (!s || !f)
+		return ;
 	while (s[i])
 	{
 		f(i, &s[i]);

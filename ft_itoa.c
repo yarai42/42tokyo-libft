@@ -6,18 +6,18 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 17:32:19 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/24 23:40:38 by yarai            ###   ########.fr       */
+/*   Updated: 2022/05/28 22:58:22 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 #include <stdio.h>
 
-char	*ft_itoa(int	n);
-int		ft_nlen(int		n);
-char	*ft_culc(char	*ans, int	n, int	n_len);
+char		*ft_itoa(int	n);
+static int	ft_nlen(int		n);
+static char	*ft_culc(char	*ans, int	n, int	n_len);
 
-int	ft_nlen(int	n)
+static int	ft_nlen(int	n)
 {
 	int	len;
 
@@ -39,7 +39,7 @@ int	ft_nlen(int	n)
 	return (len);
 }
 
-char	*ft_culc(char	*ans, int	n, int	n_len)
+static char	*ft_culc(char	*ans, int	n, int	n_len)
 {
 	int	sign;
 

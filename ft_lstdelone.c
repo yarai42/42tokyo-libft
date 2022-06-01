@@ -6,27 +6,21 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 20:47:56 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/26 23:04:16 by yarai            ###   ########.fr       */
+/*   Updated: 2022/05/31 21:59:29 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_lstdelone(t_list	*lst, void	(*del)(void *));
-void	*del(void	*lst);
-
-void	*del(void	*lst)
-{
-	
-}
 
 void	ft_lstdelone(t_list	*lst, void	(*del)(void *))
 {
-	t_list	*tmp;
-
-	if (!(*del))
+	if (!del || !lst)
 		return ;
-	tmp = (*del) -> next;
+	del(lst -> content);
+	lst -> content = NULL;
+	lst -> next = NULL;
 	free(lst);
-	*del = tmp;
+	lst = NULL;
 }

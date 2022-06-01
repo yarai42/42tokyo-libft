@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:35:41 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/27 23:31:05 by yarai            ###   ########.fr       */
+/*   Updated: 2022/05/28 19:41:40 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strchr(const	char	*s, int	c)
 			return ((char *)(s + i));
 		i++;
 	}
+	if ((char)c == 0)
+		return ((char *)(s + i));
 	return (NULL);
 }

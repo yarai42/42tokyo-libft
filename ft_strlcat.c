@@ -6,16 +6,16 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 14:33:17 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/24 21:27:01 by yarai            ###   ########.fr       */
+/*   Updated: 2022/05/28 23:00:39 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char	*dst, const	char	*src, size_t	dstsize);
-size_t	ft_strLen(char	*s);
+size_t			ft_strlcat(char	*dst, const	char	*src, size_t	dstsize);
+static size_t	ft_strLen(char	*s);
 
-size_t	ft_strLen(char	*s)
+static size_t	ft_strLen(char	*s)
 {
 	size_t	i;
 

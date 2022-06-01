@@ -6,7 +6,7 @@
 #    By: yarai </var/mail/yarai>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/20 11:10:8 by yarai             #+#    #+#              #
-#    Updated: 2022/05/28 01:06:19 by yarai            ###   ########.fr        #
+#    Updated: 2022/05/29 01:09:38 by yarai            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ BSRCS := ft_lstnew.c \
 	ft_lstdelone.c \
 	ft_lstclear.c \
 	ft_lstiter.c \
-	ft_lstmap.c \
+	ft_lstmap.c
 
 ifeq ($(MAKECMDGOALS),bonus)
 	SRCS += $(BSRCS)
