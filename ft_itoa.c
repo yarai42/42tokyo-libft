@@ -6,12 +6,11 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 17:32:19 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/28 22:58:22 by yarai            ###   ########.fr       */
+/*   Updated: 2022/07/04 00:35:58 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
-#include <stdio.h>
 
 char		*ft_itoa(int	n);
 static int	ft_nlen(int		n);
