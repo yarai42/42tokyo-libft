@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 10:18:43 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/28 22:53:51 by yarai            ###   ########.fr       */
+/*   Updated: 2022/06/10 00:57:42 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static void	ft_pchar_fd(char	c, int	fd)
 
 void	ft_putnbr_fd(int	n, int	fd)
 {
+	if (fd < 0)
+		return ;
 	if (n < 0 && n != INT_MIN)
 	{
 		ft_pchar_fd('-', fd);

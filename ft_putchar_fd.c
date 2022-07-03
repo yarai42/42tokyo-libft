@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 10:07:25 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/20 22:09:16 by yarai            ###   ########.fr       */
+/*   Updated: 2022/06/10 00:57:10 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,7 @@ void	ft_putchar_fd(char	c, int	fd);
 
 void	ft_putchar_fd(char	c, int	fd)
 {
+	if (fd < 0)
+		return ;
 	write(fd, &c, 1);
 }
