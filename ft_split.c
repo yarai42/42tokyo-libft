@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 07:35:17 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/25 00:14:40 by yarai            ###   ########.fr       */
+/*   Updated: 2022/07/13 23:55:53 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,24 @@
 
 char			**ft_split(char const	*s, char	c);
 static size_t	split_count(char const	*s, char	c);
-static char		*ft_sub_str(char const	*s, size_t	start, size_t	len);
-static char		**ft_ans(char	**ans, char const	*s, char	c, size_t	l);
-static void		ft_free(char	*arr);
+static bool		ft_ans(char	**ans, char const	*s, char	c, size_t	l);
+static char		*last_sp(char const	*s, size_t	l, bool	flag);
+static char		**ft_all_free(char	**arr);
 
-static void	ft_free(char	*arr)
-{
-	free(arr);
-}
-
-static char	*ft_sub_str(char const	*s, size_t	start, size_t	len)
+static char	**ft_all_free(char	**arr)
 {
 	size_t	i;
-	char	*ans;
 
 	i = 0;
-	ans = (char *)malloc(sizeof(char) * (len + 1));
-	if (ans == NULL)
+	while (arr[i])
 	{
-		ft_free(ans);
-		return (NULL);
+		free(arr[i]);
+		arr[i] = NULL;
+		i++;
 	}
-	while (i < len)
-		ans[i++] = s[start++];
-	ans[i] = '\0';
-	return (ans);
+	free(arr);
+	arr = NULL;
+	return (arr);
 }
 
 static size_t	split_count(char const	*s, char	c)
@@ -50,6 +43,8 @@ static size_t	split_count(char const	*s, char	c)
 	flag = false;
 	i = 0;
 	split_cnt = 0;
+	if (!*s)
+		return (0);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c && flag)
@@ -66,7 +61,21 @@ static size_t	split_count(char const	*s, char	c)
 	return (split_cnt);
 }
 
-static char	**ft_ans(char	**ans, char const	*s, char	c, size_t	l)
+static char	*last_sp(char const	*s, size_t	l, bool	flag)
+{
+	char	*last_sp;
+
+	last_sp = NULL;
+	if (flag)
+	{
+		last_sp = ft_substr(s - l, 0, l);
+		if (last_sp == NULL)
+			return (NULL);
+	}
+	return (last_sp);
+}
+
+static bool	ft_ans(char	**ans, char const	*s, char	c, size_t	l)
 {
 	size_t	i;
 	bool	flag;
@@ -77,7 +86,9 @@ static char	**ft_ans(char	**ans, char const	*s, char	c, size_t	l)
 	{
 		if (s[0] == c && flag)
 		{
-			ans[i++] = ft_sub_str(s - l, 0, l);
+			ans[i++] = ft_substr(s - l, 0, l);
+			if (ans[i - 1] == NULL)
+				return (false);
 			flag = false;
 			l = 0;
 		}
@@ -88,22 +99,30 @@ static char	**ft_ans(char	**ans, char const	*s, char	c, size_t	l)
 		}
 		s++;
 	}
-	if (flag)
-		ans[i++] = ft_sub_str(s - l, 0, l);
-	ans[i] = NULL;
-	return (ans);
+	ans[i] = last_sp(s, l, flag);
+	return (true);
 }
 
 char	**ft_split(char const	*s, char	c)
 {
 	char	**ans;
 	size_t	split_elemlen;
-	size_t	split_strlen;
+	bool	flag;
 
+	if (!s)
+		return (NULL);
 	split_elemlen = split_count(s, c);
-	split_strlen = 0;
 	ans = (char **)malloc(sizeof(char *) * (split_elemlen + 1));
 	if (ans == NULL)
 		return (NULL);
-	return (ft_ans(ans, s, c, split_strlen));
+	if (split_elemlen == 0)
+	{
+		ans[0] = NULL;
+		return (ans);
+	}
+	flag = ft_ans(&ans[0], s, c, 0);
+	if (!flag || ans[split_elemlen - 1] == NULL)
+		return (ft_all_free(&ans[0]));
+	ans[split_elemlen] = NULL;
+	return (ans);
 }
