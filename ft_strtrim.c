@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 09:39:46 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/28 23:02:31 by yarai            ###   ########.fr       */
+/*   Updated: 2022/07/18 10:34:39 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static size_t	ft_slen(char const	*str)
 	size_t	i;
 
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 		i++;
 	return (i);

@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 22:21:58 by yarai             #+#    #+#             */
-/*   Updated: 2022/07/05 23:58:12 by yarai            ###   ########.fr       */
+/*   Updated: 2022/07/18 10:27:22 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const	*s, unsigned	int	start, size_t	len)
 	size_t	s_len;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	s_len = ft_strlen(s);
 	i = 0;
 	if (len == 0 || start >= s_len)

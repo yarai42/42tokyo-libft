@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 08:35:58 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/28 22:59:38 by yarai            ###   ########.fr       */
+/*   Updated: 2022/07/18 10:32:42 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_strjoin(char const	*s1, char const	*s2)
 	size_t	i;
 	char	*ans;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_len(s1);
 	s2_len = ft_len(s2);
 	i = 0;

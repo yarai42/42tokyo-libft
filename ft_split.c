@@ -6,7 +6,7 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 07:35:17 by yarai             #+#    #+#             */
-/*   Updated: 2022/07/13 23:55:53 by yarai            ###   ########.fr       */
+/*   Updated: 2022/07/18 10:42:06 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ char	**ft_split(char const	*s, char	c)
 {
 	char	**ans;
 	size_t	split_elemlen;
-	bool	flag;
+	bool	null_flag;
 
 	if (!s)
 		return (NULL);
@@ -120,8 +120,8 @@ char	**ft_split(char const	*s, char	c)
 		ans[0] = NULL;
 		return (ans);
 	}
-	flag = ft_ans(&ans[0], s, c, 0);
-	if (!flag || ans[split_elemlen - 1] == NULL)
+	null_flag = ft_ans(&ans[0], s, c, 0);
+	if (!null_flag || ans[split_elemlen - 1] == NULL)
 		return (ft_all_free(&ans[0]));
 	ans[split_elemlen] = NULL;
 	return (ans);
