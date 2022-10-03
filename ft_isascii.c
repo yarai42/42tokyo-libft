@@ -6,13 +6,13 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 18:29:50 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/22 23:42:04 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:20:22 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int	c);
+int	ft_isascii(int c);
 
-int	ft_isascii(int	c)
+int	ft_isascii(int c)
 {
 	if (c >= 0x00 && c <= 0x7f)
 		return (1);

@@ -6,15 +6,15 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:35:41 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/28 19:41:40 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:20:57 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const	char	*s, int	c);
+char	*ft_strchr(const	char	*s, int c);
 
-char	*ft_strchr(const	char	*s, int	c)
+char	*ft_strchr(const	char	*s, int c)
 {
 	size_t	i;
 

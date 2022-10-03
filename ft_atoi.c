@@ -6,24 +6,24 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 06:56:23 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/28 22:54:27 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:09:24 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const	char	*str);
-static bool	ft_isspace(char	c);
-static int	ft_isSign(char	c);
+int			ft_atoi(const char *str);
+static bool	ft_isspace(char c);
+static int	ft_issign(char c);
 
-static bool	ft_isspace(char	c)
+static bool	ft_isspace(char c)
 {
 	if (('\t' <= c && c <= '\r') || c == ' ')
 		return (true);
 	return (false);
 }
 
-static int	ft_isSign(char	c)
+static int	ft_issign(char c)
 {
 	if (c == '-')
 		return (-1);
@@ -32,7 +32,7 @@ static int	ft_isSign(char	c)
 	return (0);
 }
 
-int	ft_atoi(const	char	*str)
+int	ft_atoi(const char *str)
 {
 	size_t	i;
 	int		sign;
@@ -43,9 +43,9 @@ int	ft_atoi(const	char	*str)
 	ans = 0;
 	while (ft_isspace(str[i]))
 		i++;
-	if (ft_isSign(str[i]) != 0)
+	if (ft_issign(str[i]) != 0)
 	{
-		sign = ft_isSign(str[i]);
+		sign = ft_issign(str[i]);
 		i++;
 	}
 	while ((0 <= str[i] - '0') && (str[i] - '0' <= 9))

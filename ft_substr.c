@@ -6,15 +6,15 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 22:21:58 by yarai             #+#    #+#             */
-/*   Updated: 2022/07/18 10:27:22 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:12:03 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char	const	*s, unsigned	int	start, size_t	len);
+char	*ft_substr(char	const	*s, unsigned int start, size_t	len);
 
-char	*ft_substr(char const	*s, unsigned	int	start, size_t	len)
+char	*ft_substr(char const	*s, unsigned int start, size_t	len)
 {
 	char	*str;
 	size_t	s_len;

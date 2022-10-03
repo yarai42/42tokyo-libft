@@ -6,13 +6,13 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:29:34 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/22 22:39:23 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:23:02 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int	c);
+int	ft_isdigit(int c);
 
-int	ft_isdigit(int	c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (c);

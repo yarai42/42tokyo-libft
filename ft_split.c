@@ -6,15 +6,15 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 07:35:17 by yarai             #+#    #+#             */
-/*   Updated: 2022/07/18 10:42:06 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:15:20 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**ft_split(char const	*s, char	c);
-static size_t	split_count(char const	*s, char	c);
-static bool		ft_ans(char	**ans, char const	*s, char	c, size_t	l);
+char			**ft_split(char const	*s, char c);
+static size_t	split_count(char const	*s, char c);
+static bool		ft_ans(char	**ans, char const	*s, char c, size_t	l);
 static char		*last_sp(char const	*s, size_t	l, bool	flag);
 static char		**ft_all_free(char	**arr);
 
@@ -34,7 +34,7 @@ static char	**ft_all_free(char	**arr)
 	return (arr);
 }
 
-static size_t	split_count(char const	*s, char	c)
+static size_t	split_count(char const	*s, char c)
 {
 	size_t	split_cnt;
 	size_t	i;
@@ -75,7 +75,7 @@ static char	*last_sp(char const	*s, size_t	l, bool	flag)
 	return (last_sp);
 }
 
-static bool	ft_ans(char	**ans, char const	*s, char	c, size_t	l)
+static bool	ft_ans(char	**ans, char const	*s, char c, size_t	l)
 {
 	size_t	i;
 	bool	flag;
@@ -103,7 +103,7 @@ static bool	ft_ans(char	**ans, char const	*s, char	c, size_t	l)
 	return (true);
 }
 
-char	**ft_split(char const	*s, char	c)
+char	**ft_split(char const	*s, char c)
 {
 	char	**ans;
 	size_t	split_elemlen;

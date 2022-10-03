@@ -6,13 +6,13 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:47:22 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/22 22:29:52 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:05:51 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int	c);
+int	ft_isalnum(int c);
 
-int	ft_isalnum(int	c)
+int	ft_isalnum(int c)
 {
 	if ((c >= '0' && c <= '9')
 		|| (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))

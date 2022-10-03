@@ -6,13 +6,13 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 18:33:31 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/22 22:41:02 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:17:35 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int	c);
+int	ft_isprint(int c);
 
-int	ft_isprint(int	c)
+int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
 		return (c);

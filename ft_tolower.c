@@ -6,13 +6,13 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 18:23:19 by yarai             #+#    #+#             */
-/*   Updated: 2022/05/20 22:02:35 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:04:08 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int	c);
+int	ft_tolower(int c);
 
-int	ft_tolower(int	c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += ('a' - 'A');

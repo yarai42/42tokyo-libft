@@ -6,16 +6,16 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 14:33:17 by yarai             #+#    #+#             */
-/*   Updated: 2022/07/13 01:45:01 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:10:30 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 size_t			ft_strlcat(char	*dst, const	char	*src, size_t	dstsize);
-static size_t	ft_strLen(char	*s);
+static size_t	ft_str_len(char	*s);
 
-static size_t	ft_strLen(char	*s)
+static size_t	ft_str_len(char	*s)
 {
 	size_t	i;
 
@@ -34,8 +34,8 @@ size_t	ft_strlcat(char	*dst, const	char	*src, size_t	dstsize)
 	size_t	i;
 	size_t	j;
 
-	dst_len = ft_strLen(dst);
-	src_len = ft_strLen((char *)src);
+	dst_len = ft_str_len(dst);
+	src_len = ft_str_len((char *)src);
 	i = dst_len;
 	j = 0;
 	if (dstsize <= dst_len)

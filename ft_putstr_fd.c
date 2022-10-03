@@ -6,15 +6,15 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 10:12:39 by yarai             #+#    #+#             */
-/*   Updated: 2022/07/18 10:38:02 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:22:28 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char	*s, int	fd);
+void	ft_putstr_fd(char	*s, int fd);
 
-void	ft_putstr_fd(char	*s, int	fd)
+void	ft_putstr_fd(char	*s, int fd)
 {
 	size_t	i;
 

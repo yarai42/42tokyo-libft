@@ -6,21 +6,21 @@
 /*   By: yarai </var/mail/yarai>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 10:18:43 by yarai             #+#    #+#             */
-/*   Updated: 2022/06/10 00:57:42 by yarai            ###   ########.fr       */
+/*   Updated: 2022/10/02 13:22:10 by yarai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putnbr_fd(int	n, int	fd);
-static void	ft_pchar_fd(char	c, int	fd);
+void		ft_putnbr_fd(int n, int fd);
+static void	ft_pchar_fd(char c, int fd);
 
-static void	ft_pchar_fd(char	c, int	fd)
+static void	ft_pchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
 
-void	ft_putnbr_fd(int	n, int	fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (fd < 0)
 		return ;
